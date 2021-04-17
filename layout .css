@@ -1,0 +1,64 @@
+* { /* สําาหรับ reset*/
+    padding: 0px;
+    margin: 0px;
+}
+
+
+/*คลาส clear-fix มีไว้แก้บัคการ float-left ใน CSS ของส่วน  aside
+เพื่อไม่ให้ตัวส่วนของ footer ลอยขึ้นมา */
+.clear-fix {
+    
+    clear: both; /* footer จะไม่ลอยไปข้างบนแล้ว */
+}
+
+
+.container{
+    width: 960px;
+    background: blue;
+    overflow: hidden;  /* ช่วย footer ขึ้นมาจากกรอบได้*/
+    margin: 0 auto
+    
+    
+    
+}
+
+header{
+    
+    text-align: center;
+    width: 880px;
+    height: 250px;
+    background: yellow;
+    margin: 0px /* แบบนีคือ margin ของบนกับล่างเป็น 10px */ auto; /* margin ด้าน ซ้าย-ขวาจะดันมาให้อยู่ตรงกลางไปเลย โดยอัตโนมัติ */
+    
+}
+
+section{
+    margin-top: 20px;
+    text-align: center;
+    width: 545px;
+    height: 700px;
+    background: chartreuse;
+    float: left;
+    margin-left: 40px;
+}
+
+aside{
+    text-align: center;
+    margin-top: 20px; 
+    margin-left: 25px;
+    width: 305px;
+    height: 700px;
+    background: palevioletred;
+    float: left;
+    
+    
+}
+
+footer{
+    background: crimson;
+    text-align: center;
+    width: 880px;
+    height: 50px;
+    margin: 10px /* แบบนีคือ margin ของบนกับล่างเป็น 10px */ auto; /* margin ด้าน ซ้าย-ขวาจะดันมาให้อยู่ตรงกลางไปเลย โดยอัตโนมัติ  */
+    
+}
