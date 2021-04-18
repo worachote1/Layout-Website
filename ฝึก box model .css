@@ -1,0 +1,47 @@
+
+/* โดยปกติแล้ว google chrome จะกําหนด margin เป็น 8 px มาให้ก่อน */
+/* หน่วย 1 rem = 16px  */
+
+
+
+body {
+    margin: 0px;
+}
+
+
+/* CSS การใช้ Display มีอยู่ 3 แบบ */
+/* ถ้าเราใช้ เป็น block ความกว้างของ element จะกว้างเต็มหน้า เว็บ ได้
+/* ถ้าเราใช้ เป็น inline เป็นการกําหนดให้ element ขึ้นมาต่อกันได้ ซึ่งขณะที่เราใช้ inline จะไม่สามารถ กําหนด CSS บางตัว เช่น Width, */
+/* ถ้าเราใช้ เป็น inline-block จะเหมือนกับการใช้ inline เลยแต่สามารถ กําหนด CSS ได้ปกติ*/
+h1 {
+    background: teal;
+    display: inline-block;
+    border: 5px solid crimson;
+    width: 400px;
+    height: 300px;
+    margin-top: 20px;
+    margin-left: 20px;
+    padding: 40px; /* padding คล้ายๆกะ margin แต่ จะขยายพวกข้อความภายในกล่อง*/
+
+    box-sizing: border-box; /*ใช้คําสั่ง box-sizing: border-box เพราะเวลาเราเพิ่มpadding กล่องจะได้ไม่ขยายตามเหมือนตอนปกติ*/
+}
+
+/* CSS การใช้ Position*/
+/* กล่องลูกให้ใช้ absolute ส่วนกล่องแม่ให้ใช้ relative เวลาเปลี่ยนอะไรใน css กล่องลูก(child) จะไม่หลุดออกจากตําแหน่งแม่*/
+.parent{
+    width: 350px;
+    height: 350px;
+    background: green;
+    position: relative;
+    left: 250px;
+    top: 40px
+}
+
+.child{
+    width: 150px;
+    height: 150px;
+    background: red;
+    position: absolute;
+    bottom:0px;
+    left: 75px;
+}
