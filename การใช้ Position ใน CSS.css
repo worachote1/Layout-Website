@@ -1,0 +1,107 @@
+/* การใช้  Position ใน CSS
+
+-static ไม่เปลี่ยนค่า
+-relative อ้างอิงจากตําแหน่งเดิม
+-fixed  เวลามีข้อความในเว็บยาวๆ แล้วต้องเลื่อน scroll เม้าส์ กล่องของเราจะตามติดลงไปด้วยไม่หายไปไหน
+-absolute อ้างอิงจากตําแหน่งที่ใช้ relative เพราะฉะนั้น กล่องของ absolute จะไม่มีทางออกนอก กล่องของ relative
+-sticky เหมือนตอนใช้ fixed แต่พอเลื่อนกลับไปตําแหน่งเดิมจะไม่มีอะไร
+ */
+
+ /* การใช้ Z-index
+
+เวลาที่มีการเรียกใช้ position elements ที่ถูกจัดตําแหน่งอาจจะซ้อนทับกันได้กับ elements ตัวอื่นๆ
+เราใช้ z-index มาเพื่อจัดเรียง elements ให้ตัวไหนอยู่หน้าอยู่หลัง
+ถ้ากําหนด z-index ให้น้อยกว่ากล่องก็จะถูกทับจากกล่องอื่นที่มีค่า z-index มากว่าได้
+*/
+
+/* การใช้งาน float
+
+เป็นการสั่งให้ตัว elements ว่าจะให้ ลอยไปชิดซ้าย หรือ ชิดขวา สมัยนี้ไม่ค่อยมีคนใช้ทํา layout เพราะมี bug
+*/
+
+ /*
+div{
+
+width: 300px;
+height: 20px;
+border: 3px  solid greenyellow;
+position: relative;
+left: 0px;
+top : 0px; 
+
+} */
+
+.test-fixed-position{
+    background: black;
+    color: beige;
+    width: 640px;
+    height: 40px;
+    
+    border: 3px dashed yellow;
+   
+    top: 0px;
+    right: 0px;
+
+   
+    position: fixed; /* ใช้ position เป็น fixed เวลามีข้อความในเว็บยาวๆ แล้วต้องเลื่อน scroll เม้าส์ กล่องของเราจะตามติดลงไปด้วยไม่หายไปไหน*/
+    
+} 
+
+.box1{
+    width: 100px;
+    height: 100px;
+    background: red;
+    border: 2px solid black;
+    position: relative;
+    top: 50px;
+    z-index: -1;
+}
+
+.box2{
+    
+    width: 100px;
+    height: 100px;
+    background:green;
+    border: 2px solid black;
+    z-index: 1;
+    
+}
+
+.box3{
+    
+    width: 100px;
+    height: 100px;
+    background: purple;
+    border: 2px solid black;
+    z-index: 2;
+    position: relative;
+    top: -24px;
+}
+
+header{
+    height: 60px;
+    background: yellow;
+}
+
+section{
+    width: 40%;
+    background: crimson;
+    float: left;
+    height: 300px;
+}
+
+aside{
+    width: 40%;
+    height: 300px;
+    background: cornflowerblue;
+    float: right
+    
+}
+
+footer{
+    height: 60px;
+    background: teal;
+    clear: both; /* ใช้ clear เพื่อแก้ไข bug จาก float จะได้ไม่ต้องไปแทรกระหว่าง section กะ aside*/
+}
+
+
