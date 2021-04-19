@@ -1,0 +1,90 @@
+body{
+    margin: 0px;
+    padding: 0px;
+    background: whitesmoke;
+
+}
+
+/* .nav ul หมายถึงให้เข้าถึง เฉพาะ ul ที่เป็นลูกของ class nav เท่านั้น*/
+.nav ul{
+    background-color: blanchedalmond;
+    list-style: none; /* ลบ bullet หน้าอันที่เป็น list ออก*/
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    
+
+}
+
+.nav li{
+    font-size: 1.2em;
+    line-height: 40px;
+    text-align: left;
+
+}
+
+.nav a{
+    text-decoration: none;
+    color: black;
+    display: block;
+    border-bottom: 1px solid crimson;
+    padding-left: 15px;
+    transition:.3s ; 
+}
+
+.nav a:hover{
+    background-color:teal;
+}
+
+/*.nav a.active หมายถึงให้เข้าถึง a ของ nav ที่ class เป็น active*/
+.nav a.active{
+    background-color: gray;
+    cursor: default;
+}
+
+.nav li li{ /* เข้าถึงใน li แค่ตัวที่เป็นลูกของ li อีกทีนึง*/
+    font-size: .8em;
+
+}
+
+
+/* จัด Style Menu สําหรับหน้าจอใหญ่กว่า */
+@media screen and (min-width: 650px) {
+
+    .nav li{
+        width: 130px;
+        border-bottom: none;
+        height: 50px;
+        line-height: 50px;
+        font-size: 1.4em;
+        display: inline-block;
+        margin-right: -4px;
+
+    }
+    
+    .nav a{
+        border-bottom: none;
+    }
+  
+    .nav > ul > li { /* เข้าถึง li จาก ul ตัวที่เป็นลูกของ div ที่มี class เป็น nav*/
+        text-align: center; 
+
+    }
+
+    .nav > ul > li > a{
+        padding-left: 0;
+    }
+
+    /* เข้าถึงตัว Menu ย่อย*/
+    .nav li ul {
+     position: absolute; 
+     display: none; /*เก็บ Menu ย่อย เอาไว้ */
+     width: inherit; 
+    }
+    .nav li:hover ul{ /* ให้เวลาเอาเม้าส์ไปวางแล้ว โชว์ Menu ย่อย ลงมา*/
+        display: block;
+
+    }
+
+    
+}
