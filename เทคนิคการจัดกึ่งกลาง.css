@@ -1,0 +1,18 @@
+.container{
+  max-width: 960px; /* max-width ใช้เพื่อจะได้เป็น Responsive*/
+  height: 500px;
+  margin: 0 auto; /* จัดกึ่งกลาง*/
+  border: 1px solid red;
+  text-align: center;
+  padding: 3rem;
+  display: flex;
+  justify-content: center; /* เหมือนจัดกึ่งกลางตามแนวแกน X แนวนอน */
+  align-items: center; /* เหมือนจัดกึ่งกลางตามแนวแกน Y แนวตั้ง */
+}
+
+.child{
+
+    width: 150px;
+    height: 150px;
+    background: orange;
+}
