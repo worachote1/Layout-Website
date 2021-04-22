@@ -1,0 +1,89 @@
+* {
+    padding: 0; 
+    margin: 0; 
+}
+
+/*
+.grid-container{
+    display: grid; /* เป็นการบอกตัว CSS ว่าเราจะใช้ Grid*/
+   
+    /* หน่วย fr จะช่วยแบ่ง แถว และ คอลัมน์ เป็นสัดส่วน*/
+    /* grid-template-columns: 1fr 1fr 2fr ; กําหนด คอลัมน์ โดย เว้น วรรคนับเป็น คอลัมน์ที่ 1 2 3 ตามลําดับ */
+    /* grid-template-rows: 50px 100px; กําหนด แถว */
+
+    
+    /* ใช้งาน repeat() ใส่พารามิเตอรื์ 2 ตัว ตัวแรกคือจํานวน แถวหรือ คอลัมน์ ที่ต้องการ ตัวที่2คือ ขนาดของ Grid*/
+    /* เพื่อจะได้ ขนาดเท่ากันทุกแถว หรือ ทุกคอลัมน์*/
+    /* grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(5,100px); เอา 4 แถวซึ่งแต่ละแถวกว้าง 100px
+     */
+    
+    /* ใช้ grid-template โดยตั้งชื่อให้ grid line แต่ละเส้นได้ โดยพิมพ์ชื่อใน [] ด้านหน้าขนาดที่ต้องการ*/
+
+    /* grid-template-columns: [col-1-start] 1fr [col-2-start] 1fr [col-3-start] 1fr [col-3-ends];
+    grid-template-rows: [row-start row-1-start] 100px [row-1-end row-2-start] 100px [row-2-end]; */
+
+  /* กําหนด gasp หรือช่องว่างให้ grid ของเรา*/
+    /* grid-column-gap: 1em;  
+    grid-row-gap: 2em; */
+
+/* }  */
+
+
+/* .grid-items{
+    border: 1px solid white;
+    
+} */
+
+/* .grid1{ */
+    /*ยื่นกล่อง div grid1 ในแนวคอลัมน์ จาก grid line เส้นที่ 1 ถึง เส้นที่ 4 */
+    /* grid-column-start: 1; 
+    grid-column-end: 4; */
+
+    /* ทําให้ช่องที่ 1 มาอยู่ในช่องที่ 5*/
+    /* grid-column-start: col-2-start;
+    grid-column-end: col-3-start;
+    grid-row-start: row-1-end;
+    grid-row-end: row-2-end;
+}  */
+
+
+/*  เริ่ม จัด Layout ด้วย Grid CSS */
+
+.grid-container{
+    display: grid;
+    background: green;
+    grid-template-columns: 1fr 200px; /* ความกว้างของ คอลัมน์ที่ 1 และ 2 ตามลําดับ*/
+    grid-template-rows: 150px 200px 60px;
+    padding: 1em;
+    /*   กําหนดตําแหน่งชื่อ */
+    grid-template-areas:"header header" 
+                        "content sidebar"
+                        "footer footer";
+    
+                        
+    
+    
+
+}
+
+.grid{
+    border: 1px solid white;
+
+}
+
+.header{
+    grid-area: header;
+}
+
+.content{
+    grid-area: content;
+}
+
+.sidebar{
+    grid-area: sidebar;
+}
+
+.footer{
+     grid-area: footer; 
+}
