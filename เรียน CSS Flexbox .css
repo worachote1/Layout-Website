@@ -1,0 +1,34 @@
+.flex-container{
+    background: burlywood;
+    height: 750px;
+
+    display: flex; /*ใช้งาน flex กล่อง divที่ 1 ถึง 5 จะเรียงจากซ้ายไปขวา */
+    /* flex-direction: column; ปรับให้กล่องเรียงเป็นคอลัมน์ ในแนวตั้ง */
+    /* flex-wrap: wrap; ถ้าเราย่อหน้าจอแล้วกล่องจะลงมาต่อบรรทัดใหม่ */
+
+    /* flex-flow เป็น shorthand ของ flex-direction และ flex-wrap: wrap*/
+    /* flex-flow: row wrap; */
+   
+    /* justify-content: center; จัดตําแหน่ง ใช้เมื่อกล่องเราเป็นแบบ row */
+     align-items: flex-start;   /*จัดตําแหน่ง ใช้เมื่อกล่องเราเป็นแบบ column */
+    
+    
+
+}
+
+.flex-items-1, .flex-items-2 , .flex-items-3 , .flex-items-4, .flex-items-5{
+ 
+    width: 150px;
+    height: 150px;
+    background: brown;
+    margin: 10px;
+    
+}
+
+.flex-items-1{
+    flex-grow: 1; /*ขยายความกว้างกล่อง มันจะไปเบียดตัวอื่นแต่ก็ยังจัดรูปแบบในแนวเดียวกันได้*/
+}
+
+.flex-items-3{
+    flex-grow: 1;
+}
