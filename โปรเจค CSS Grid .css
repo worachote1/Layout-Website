@@ -1,0 +1,38 @@
+*{
+    
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    background: wheat;
+    max-width: 1150px;
+    margin: 0 auto; /*จัดให้ส่วนนี้อยู่กึ่งกลาง */
+}
+
+.section-area-grid{
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-gap: 10px;
+    
+}
+
+.section-grid-item{
+    text-align: center;
+}
+
+.section-item-img img{
+    width: 100%;
+}
+
+@media only screen and (max-width: 675px) { /* เมื่อเราบีบหน้าจอมาที่ 675px จะลดเหลือ 1 คอลัมน์*/
+    .section-area-grid{
+        
+        grid-template-columns: 1fr ;
+        padding: 10px; 
+       
+    }
+
+
+}
